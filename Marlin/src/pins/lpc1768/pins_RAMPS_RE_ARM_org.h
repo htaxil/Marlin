@@ -340,11 +340,7 @@
     #define BEEPER_PIN     P1_30   // (37) not 5V tolerant
     #define BTN_ENC        P2_11   // (35) J3-3 & AUX-4
   #endif
- 
-  #if ENABLED(MKS_12864OLED) || ENABLED(MKS_12864OLED_SSD1306)
-    #define LCD_PINS_DC    P2_06   // J3-8 & AUX-3 (SCK, CLK)
-  #endif
-  
+
   #define BTN_EN1          P3_26   // (31) J3-2 & AUX-4
   #define BTN_EN2          P3_25   // (33) J3-4 & AUX-4
 
@@ -359,7 +355,6 @@
       #define SHIFT_CLK    P0_15   // (52) (SCK)  J3-9 & AUX-3
       #define SHIFT_LD     P1_31   // (49)        J3-1 & AUX-3 (NOT 5V tolerant)
     #endif
-  
   #else
     //#define SHIFT_CLK      P3_26   // (31)  J3-2 & AUX-4
     //#define SHIFT_LD       P3_25   // (33)  J3-4 & AUX-4
