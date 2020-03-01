@@ -297,20 +297,6 @@
  */
 
 /**
- * RAMPS LCD adapter on re-arm 
- * - https://reprap.org/wiki/File:Re-ARM_LCD_adapter.jpg
- * - https://reprap.org/wiki/File:Re-ARM_LCD_adapter_MKS_Rev_4.jpg
- *                _____                                            _____
- * (BEEPER) 1.30 | · · | 2.11 (BTN_ENC)          (MISO)      0.17 | · · | 0.15 (SD_SCK)
- * (LCD_EN) 0.18 | · · | 0.16 (LCD_RS)           (BTN_EN1)   3.26 | · · | 1.23 (SD_CS2)
- * (LCD_D4) 0.15 | · · | NC   (LCD_D5)           (BTN_EN2)   3.25 | · · | 0.18 (SD_MOSI)
- * (LCD_D6)  NC  | · · | NC   (LCD_D7)           (SD_DETECT) 1.31 | · · | 1.22 (RST)
- *           GND | · · | 3.3V                                 GND | · · | NC
- *                -----                                            -----
- *                EXP1 (J3)                                             EXP2 (J5)
- */
-
-/**
  * Smart LCD adapter
  *
  * The Smart LCD adapter can be used for the two 10 pin LCD controllers such as
@@ -357,17 +343,15 @@
  
   #if ENABLED(MKS_12864OLED) || ENABLED(MKS_12864OLED_SSD1306)
     #define LCD_PINS_DC    P2_06   // J3-8 & AUX-3 (SCK, CLK)
-    #define LCD_SDSS       P1_23   // (53) J3-5 
-  #else
-    #define LCD_SDSS       P0_16   // (16) J3-7 & AUX-4
   #endif
-
+  
   #define BTN_EN1          P3_26   // (31) J3-2 & AUX-4
   #define BTN_EN2          P3_25   // (33) J3-4 & AUX-4
 
   #define SD_DETECT_PIN    P1_31   // (49) J3-1 & AUX-3 (NOT 5V tolerant)
   #define KILL_PIN         P1_22   // (41) J5-4 & AUX-4
   #define LCD_PINS_RS      P0_16   // (16) J3-7 & AUX-4
+  #define LCD_SDSS         P0_16   // (16) J3-7 & AUX-4
 
   #if ENABLED(NEWPANEL)
     #if ENABLED(REPRAPWORLD_KEYPAD)
