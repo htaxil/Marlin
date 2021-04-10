@@ -521,10 +521,7 @@
   //#define  DEFAULT_Ki 0.57
   //#define  DEFAULT_Kd 65.62
 
-  //HotEnd E3Dv6 chinoise isolee silicone (etalonage du 2018/05/12 à 200°C 8 cycles : M303 E0 S200 C8)
-  #define  DEFAULT_Kp 39.90
-  #define  DEFAULT_Ki 4.31
-  #define  DEFAULT_Kd 92.34
+  
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
@@ -533,9 +530,10 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    //HotEnd E3Dv6 chinoise isolee silicone (etalonage du 2018/05/12 à 200°C 8 cycles : M303 E0 S200 C8)
+    #define  DEFAULT_Kp 39.90
+    #define  DEFAULT_Ki 4.31
+    #define  DEFAULT_Kd 92.34
   #endif
 
 #endif // PIDTEMP
